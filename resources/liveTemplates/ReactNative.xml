@@ -2,7 +2,7 @@
     <template name="rnc"
               value="import React, { Component } from 'react';&#10;import { Text, View } from 'react-native';&#10;&#10;
               class $componentName$ extends Component {&#10;    render() {&#10;        return (&#10;            &lt;Text&gt;&#10;                $END$&#10;            &lt;/Text&gt;&#10;        );&#10;    }&#10;}&#10;&#10;export default $componentName$;&#10;"
-              description="Creates a React Native component class"
+              description="Creates a React Native  class competent"
               toReformat="true"
               toShortenFQNames="true">
         <variable name="componentName" expression="" defaultValue="&quot;MyComponent&quot;" alwaysStopAt="true"/>
@@ -10,7 +10,7 @@
     </template>
     <template name="rnrc"
               value="import React, { Component } from 'react';&#10; import { StyleSheet, Text, View, Button } from 'react-native';&#10;  import { connect } from 'react-redux';&#10;   &#10;class $componentName$ extends Component {&#10;    render() {&#10;        return (&#10;            &lt;Text&gt;&#10;                $END$&#10;            &lt;/Text&gt;&#10;        );&#10;    }&#10;}&#10; &#10;function mapStateToProps(state) {&#10;    return {&#10;    &#10;    };&#10;}   &#10;    &#10;export default connect(&#10;    mapStateToProps,&#10;)($componentName$);&#10;"
-              description="Creates a React Native component class connected to redux" toReformat="true"
+              description="Creates a React Native  class component connected to redux" toReformat="true"
               toShortenFQNames="true">
         <variable name="componentName" expression="" defaultValue="&quot;MyComponent&quot;" alwaysStopAt="true"/>
         <context>
@@ -19,7 +19,7 @@
     </template>
     <template name="rnsc"
               value="import React from 'react';&#10;&#10;import { Text, View } from 'react-native'; &#10;const $componentName$ = () =&gt; {&#10;    return (&#10;        &lt;Text&gt;&#10;            $END$&#10;        &lt;/Text&gt;&#10;    );&#10;};&#10;&#10;export default $componentName$;&#10;"
-              description="Creates a stateless React Native component without PropTypes and ES6 module system"
+              description="Creates a stateless React Native component"
               toReformat="true" toShortenFQNames="true">
         <variable name="componentName" expression="" defaultValue="&quot;MyComponent&quot;" alwaysStopAt="true"/>
         <context/>
