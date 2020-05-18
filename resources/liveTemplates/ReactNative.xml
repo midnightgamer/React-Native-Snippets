@@ -1,0 +1,103 @@
+<templateSet group="React Native">
+    <template name="rnc"
+              value="import React, { Component } from 'react';&#10;import { Text, View } from 'react-native';&#10;&#10;
+              class $componentName$ extends Component {&#10;    render() {&#10;        return (&#10;            &lt;Text&gt;&#10;                $END$&#10;            &lt;/Text&gt;&#10;        );&#10;    }&#10;}&#10;&#10;export default $componentName$;&#10;"
+              description="Creates a React Native component class"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="componentName" expression="" defaultValue="&quot;MyComponent&quot;" alwaysStopAt="true"/>
+        <context/>
+    </template>
+    <template name="rnrc"
+              value="import React, { Component } from 'react';&#10; import { StyleSheet, Text, View, Button } from 'react-native';&#10;  import { connect } from 'react-redux';&#10;   &#10;class $componentName$ extends Component {&#10;    render() {&#10;        return (&#10;            &lt;Text&gt;&#10;                $END$&#10;            &lt;/Text&gt;&#10;        );&#10;    }&#10;}&#10; &#10;function mapStateToProps(state) {&#10;    return {&#10;    &#10;    };&#10;}   &#10;    &#10;export default connect(&#10;    mapStateToProps,&#10;)($componentName$);&#10;"
+              description="Creates a React Native component class connected to redux" toReformat="true"
+              toShortenFQNames="true">
+        <variable name="componentName" expression="" defaultValue="&quot;MyComponent&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="TypeScript" value="true"/>
+        </context>
+    </template>
+    <template name="rnsc"
+              value="import React from 'react';&#10;&#10;import { Text, View } from 'react-native'; &#10;const $componentName$ = () =&gt; {&#10;    return (&#10;        &lt;Text&gt;&#10;            $END$&#10;        &lt;/Text&gt;&#10;    );&#10;};&#10;&#10;export default $componentName$;&#10;"
+              description="Creates a stateless React Native component without PropTypes and ES6 module system"
+              toReformat="true" toShortenFQNames="true">
+        <variable name="componentName" expression="" defaultValue="&quot;MyComponent&quot;" alwaysStopAt="true"/>
+        <context/>
+    </template>
+    <template name="ssf"
+              value="&#10;this.setState((state, props) =&gt; { &#10;    return {&#10;        $END$ &#10;    };&#10;});&#10;"
+              description="Performs a shallow merge of nextState into current state" toReformat="false"
+              toShortenFQNames="true">
+        <context/>
+    </template>
+
+    <template name="useState" value="const [$state$, set$setState$] = useState($initState$);$END$"
+              description="useState" toReformat="true" toShortenFQNames="true">
+        <variable name="state" expression="" defaultValue="&quot;state&quot;" alwaysStopAt="true"/>
+        <variable name="setState" expression="capitalize(state)" defaultValue="" alwaysStopAt="true"/>
+        <variable name="initState" expression="" defaultValue="&quot;initState&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="JS_EXPRESSION" value="true"/>
+            <option name="JS_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="useEffect"
+              value="useEffect(() =&gt; {&#10;  return () =&gt; {&#10;    $effect$&#10;  };&#10;}, [$input$]);&#10;$END$"
+              description="useEffect" toReformat="true" toShortenFQNames="true">
+        <variable name="effect" expression="" defaultValue="&quot;effect&quot;" alwaysStopAt="true"/>
+        <variable name="input" expression="" defaultValue="&quot;input&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="JS_EXPRESSION" value="true"/>
+            <option name="JS_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="useContext" value="const $context$ = useContext($contextValue$);$END$" description="useContext"
+              toReformat="true" toShortenFQNames="true">
+        <variable name="context" expression="" defaultValue="&quot;context&quot;" alwaysStopAt="true"/>
+        <variable name="contextValue" expression="" defaultValue="&quot;contextValue&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="JS_EXPRESSION" value="true"/>
+            <option name="JS_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="useCallback"
+              value="useCallback(&#10;  () =&gt; {&#10;    $callback$&#10;  },&#10;  [$input$],&#10;);&#10;$END$"
+              description="useCallback" toReformat="true" toShortenFQNames="true">
+        <variable name="callback" expression="" defaultValue="&quot;callback&quot;" alwaysStopAt="true"/>
+        <variable name="input" expression="" defaultValue="&quot;input&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="JS_EXPRESSION" value="true"/>
+            <option name="JS_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="useImperativeHandle"
+              value="useImperativeHandle(&#10;  $ref$,&#10;  () =&gt; {&#10;    $handler$&#10;  },&#10;  [$input$],&#10;);&#10;$END$"
+              description="useImperativeHandle" toReformat="true" toShortenFQNames="true">
+        <variable name="ref" expression="" defaultValue="&quot;ref&quot;" alwaysStopAt="true"/>
+        <variable name="handler" expression="" defaultValue="&quot;handler&quot;" alwaysStopAt="true"/>
+        <variable name="input" expression="" defaultValue="&quot;input&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="JS_EXPRESSION" value="true"/>
+            <option name="JS_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="useReducer" value="const [state, dispatch] = useReducer($reducer$, $initialState$, $init$);$END$"
+              description="useReducer" toReformat="true" toShortenFQNames="true">
+        <variable name="reducer" expression="" defaultValue="&quot;reducer&quot;" alwaysStopAt="true"/>
+        <variable name="initialState" expression="" defaultValue="&quot;initialState&quot;" alwaysStopAt="true"/>
+        <variable name="init" expression="" defaultValue="&quot;init&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="JS_EXPRESSION" value="true"/>
+            <option name="JS_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="useMemo" value="useMemo(() =&gt; $function$, $input$);$END$" description="useMemo" toReformat="true"
+              toShortenFQNames="true">
+        <variable name="function" expression="" defaultValue="&quot;function&quot;" alwaysStopAt="true"/>
+        <variable name="input" expression="" defaultValue="&quot;input&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="JS_EXPRESSION" value="true"/>
+            <option name="JS_STATEMENT" value="true"/>
+        </context>
+    </template>
+</templateSet>

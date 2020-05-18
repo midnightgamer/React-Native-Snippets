@@ -1,0 +1,37 @@
+<idea-plugin>
+  <id>com.midnightgamer.reactnative.snippts</id>
+  <name>React Native Snippets</name>
+  <version>0.0.1</version>
+  <vendor email="midnightgamer.js@gmail.com">Pankaj Jaiswal</vendor>
+
+  <description><![CDATA[
+    Live Templates For React<br>
+      Show details in Preferences -> Editor -> Live Templates -> React Native Group.
+    ]]></description>
+
+  <change-notes><![CDATA[
+     <strong>v0.0.1</strong> <br/>
+
+    ]]>
+  </change-notes>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.lang</depends>
+  <depends>com.intellij.modules.platform</depends>
+
+  <depends>JavaScript</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+    <defaultLiveTemplatesProvider implementation="com.midnightgamer.reactnative.snippts"/>
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+</idea-plugin>
