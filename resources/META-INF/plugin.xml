@@ -30,8 +30,4 @@
     <defaultLiveTemplatesProvider implementation="com.midnightgamer.reactnative.snippts"/>
   </extensions>
 
-  <actions>
-    <!-- Add your actions here -->
-  </actions>
-
 </idea-plugin>
