@@ -14,3 +14,10 @@ Live Templates for React Native.
 | `useReducer` | useReducer |
 | `useMemo` | useMemo |
 
+## Feel free to controbute 
+Steps to follow 
+1. Fork this repo and create a new branch.
+2. Branch name should be relevant to feature you are adding. 
+3. Create a jar file and test in own IDE before pushing code for merge request.
+
+Thank you for your contribution.
